@@ -10,7 +10,7 @@ One of my friend was trying to finish a project for a company and struggling to 
 As i was interested to learn more about jsoup and java i decided to do the same task and also help him with the code
 as he also was still learning, this is the result of that.
 
-Pictures at the bottom.
+Pictures at the bottom (You can press on them to get a closer look).
 
 ## Features ##
 * Will return status of a website with correct http code and discription
