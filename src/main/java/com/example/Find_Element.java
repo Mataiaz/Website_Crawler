@@ -102,13 +102,11 @@ public class Find_Element {
             }
         if (needle.isEmpty())
         {
-            System.out.println("Did not find any scam/selling-domain tags\n");
+            System.out.println("Did not find any scam/selling-domain tags");
             Http_Response.main(httpCode, "", domain);
         }
         else if (!needle.isEmpty())
         {
-            System.out.println("hello\n");
-
             Connect.main(domain, needle);
         }
         } catch (Exception e) {

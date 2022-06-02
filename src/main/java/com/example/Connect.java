@@ -12,19 +12,17 @@ import org.jsoup.select.Elements;
 public class Connect {
     public static void main(String domain, String scamOrSelling) throws IOException {
     Connection.Response response = null;
-    Connection.Response redirect = null;
 
         String http = "https://";
         String url = http + domain;
         
         //Variables for connecting to webpage and cycling through html code
         try {
-
             Document doc = Jsoup.connect(url).get();
-            System.out.println(url);
+            //System.out.println(url);
             response = Jsoup.connect(url)
             .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36")
-            .timeout(10000)
+            .timeout(App.timeOut)
             .execute();
             int httpCode = response.statusCode();
 
