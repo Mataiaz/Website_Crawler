@@ -13,7 +13,13 @@ as he also was still learning, this is the result of that.
 Pictures at the bottom.
 
 ## Features ##
-* Will be listed soon.
+* Will return status of a website with correct http code and discription
+* Can read excel files and take in list of domain names to check multiple websites or if needed a single website
+* Can detect if a website is flagged for scam
+* Can detect if the website's domain is up for sale
+* Can detect if the website's domain is no longer in use
+* The code is structured to be able to easily be optimised and take in more usecases which will boost the accuracy of the program
+* Descriptive error handling
 
 ## Contact ##
 mathias344@live.no
