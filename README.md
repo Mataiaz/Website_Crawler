@@ -25,3 +25,5 @@ Pictures at the bottom.
 mathias344@live.no
 
 Made by Mathias L. Bjarnason
+![Program process](https://github.com/Mataiaz/Website_Crawler/blob/main/website%20crawler%20process.png)
+![Program execution](https://github.com/Mataiaz/Website_Crawler/blob/main/website%20crawler%20execution.png)
