@@ -1,12 +1,9 @@
 package com.example;
 
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 
 import java.io.IOException;
-import java.net.*;
 
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 public final class GUI extends JFrame {
@@ -52,14 +49,11 @@ public final class GUI extends JFrame {
                 "Launcher", JOptionPane.YES_NO_OPTION);
 
         if (response == JOptionPane.YES_OPTION) {
-            GUI appObject = new GUI();
-            appObject.setVisible(true);
             try {
                 Input_Info.main(App.rowNbr, App.fileLocation);
             } catch (Exception e) {
                 Error_Handler.main(e, "GUI", App.userInputDomain);
             }
-            System.exit(0);
         }
         System.exit(0);
     }

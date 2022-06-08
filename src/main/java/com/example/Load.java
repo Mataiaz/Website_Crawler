@@ -20,6 +20,8 @@ public final class Load extends JFrame {
         progressBar.setValue(App.rowNbr);
         progressBar.setStringPainted(true);
         add(progressBar);
+        setLocationRelativeTo(null);
+
         setSize(250, 150);
         setLayout(null);
     }

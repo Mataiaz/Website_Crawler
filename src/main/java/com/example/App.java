@@ -8,6 +8,8 @@ public final class App {
     //For multiple websites put in a excel file, use the exampleExcel.xlsx as a format.
     static String fileLocation = "";
 
+    static String saveLocation = "resultExcel.xlsx";
+
     //For one website (for example github.com (remember to leave out the "https://"))
     static String userInputDomain = "";
 

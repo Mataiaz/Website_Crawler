@@ -87,12 +87,13 @@ public class Http_Response {
             }
             if ((httpCode >= 200 && httpCode <= 226) && scamOrSelling.isEmpty())
             {
-                //status = domain + "UP - " + httpCode + " (" + httpCode + ")";
+                status = " UP ";
+                scamOrSelling = "NO RESULT";
                 System.out.println("\nUP - " + domain + " " + httpCode + " (" + httpCodeFound + ")");
             }
             else if ((httpCode >= 400 && httpCode <= 511) || !scamOrSelling.isEmpty() || httpCode == 522)
             {
-                //status = domain + "DOWN - " + httpCode + " " + scamOrSelling + " (" + httpCodeFound + ")";
+                status = " DOWN ";
                 System.out.println("\nDOWN - " + scamOrSelling + " " + domain + " " + httpCode + " (" + httpCodeFound + ")");
             }
             if(i == 65)
@@ -100,7 +101,7 @@ public class Http_Response {
                 System.out.println(httpCodeList[0]);
             }
         System.out.println("-------------------------------------------");
-            Output.main(App.rowNbr, App.fileLocation, status);
+            Output.main(App.rowNbr, App.saveLocation, domain, status, httpCodeFound, scamOrSelling);
         } catch (Exception e) {
             Error_Handler.main(e, "Http_Response", domain);
         }
