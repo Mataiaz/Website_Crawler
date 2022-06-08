@@ -3,11 +3,13 @@ import java.io.IOException;
 //Please read README.md before use!
 public final class App {
 
+    static int x = 0;
+
     //For multiple websites put in a excel file, use the exampleExcel.xlsx as a format.
-    static String fileLocation = "exampleExcel.xlsx";
+    static String fileLocation = "";
 
     //For one website (for example github.com (remember to leave out the "https://"))
-    static String UserInputDomain = "";
+    static String userInputDomain = "";
 
     //This number is for how long the program will try to connect to a website,
     //it is recommended to be 10000millisecounds (10 sec)
@@ -16,27 +18,12 @@ public final class App {
     //This number is for how many rows in the excel file you want to skip. It is set to 1 because if you look in exampleExcel.xlsx-
     //we have preset names at the top which is row 1 and we do not want to override it.
     static int rowNbr = 1;
-    
-    private App() {
+
+    App() {
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("-------------------------------------------");
-        String domain = UserInputDomain;
-        if (!domain.isEmpty())
-        {
-            fileLocation = null;
-            System.out.print("You are running with internal domain input\n");
-            Connect.main(domain, "");
-        }
-        else
-        {
-            System.out.print("You are running file input\n");
-            try {
-                Input.main(App.rowNbr, fileLocation);
-            } catch (Exception e) {
-                Error_Handler.main(e, "App", domain);
-            }
-        }
+        GUI.main();
     }
 }
 

@@ -25,7 +25,6 @@ public class Output {
         wb.close();
         Thread.sleep(1000);
         App.rowNbr++;
-        Input.main(App.rowNbr, App.fileLocation);
         } catch (Exception e) {
             Error_Handler.main(e, "Output", "");
         }

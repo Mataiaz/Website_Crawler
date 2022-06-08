@@ -1,11 +1,11 @@
 package com.example;
 
 import java.io.IOException;
-import java.net.URI;
+//import java.net.URI;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.Connection.Response;
+//import org.jsoup.Connection.Response;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
@@ -15,7 +15,7 @@ public class Connect {
 
         String http = "https://";
         String url = http + domain;
-        
+
         //Variables for connecting to webpage and cycling through html code
         try {
             Document doc = Jsoup.connect(url).get();
@@ -39,7 +39,6 @@ public class Connect {
             }
         } catch (Exception e) {
             System.out.print(e);
-
             Error_Handler.main(e, "Connect", domain);
         }
     }
