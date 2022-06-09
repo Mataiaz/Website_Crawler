@@ -52,8 +52,6 @@ public class Output {
             wb.close();
             App.rowNbr++;
         } catch (Exception e) {
-            System.out.println(e);
-            Thread.sleep(1000);
             App.rowNbr++;
             Error_Handler.main(e, "Output", "");
         }

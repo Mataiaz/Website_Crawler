@@ -25,7 +25,11 @@ public final class GUI extends JFrame {
 
         if (response == JOptionPane.NO_OPTION) {
             try {
-                App.userInputDomain = JOptionPane.showInputDialog(null, "Write in domain to check");
+                String domain = JOptionPane.showInputDialog(null, "Write in a domain to check");
+                if (domain.contains("www."))
+                {
+                    App.userInputDomain = domain.replace("www.", "");
+                }
                 App.fileLocation = null;
                 Connect.main(App.userInputDomain, "");
                 System.exit(0);
@@ -34,7 +38,10 @@ public final class GUI extends JFrame {
             }
         }
         App.fileLocation = JOptionPane.showInputDialog(null, "What is the file called?", "exampleExcel");
-        App.fileLocation += ".xlsx";
+        if (!App.fileLocation.contains(".xlsx"))
+            {
+                App.fileLocation += ".xlsx";
+            }
         String[] option = new String[3];
         option[0] = "No format";
         option[1] = "Excel format (xlsx)";
@@ -48,16 +55,16 @@ public final class GUI extends JFrame {
             App.saveLocation = JOptionPane.showInputDialog(null, "What do you want to call the file?");
             if (!App.saveLocation.contains(".xlsx"))
             {
-                App.saveLocation = App.saveLocation + ".xlsx";
+                App.saveLocation += ".xlsx";
             }
-            Create_File.main(App.saveLocation);
         }
         response = JOptionPane.showConfirmDialog(null,
-                "Are you sure you want to run the program?\n\n" + "You have selected  " + selectedOption,
+                "Are you sure you want to run the program?\n" + "You have selected  \"" + selectedOption + "\"",
                 "Launcher", JOptionPane.YES_NO_OPTION);
 
         if (response == JOptionPane.YES_OPTION) {
             try {
+                Create_File.main(App.saveLocation);
                 Input_Info.main(App.rowNbr, App.fileLocation);
             } catch (Exception e) {
                 Error_Handler.main(e, "GUI", App.userInputDomain);
