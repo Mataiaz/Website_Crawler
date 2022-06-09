@@ -26,7 +26,6 @@ public class Output {
             System.out.println(domain + status + httpCodeFound + scamOrSelling);
             System.out.println(rowNbr);
             Row row = sheet.createRow(rowNbr);
-            System.out.println("wwewewewe");
             Cell cell = row.createCell(0);
             cell.setCellStyle(cs);
             cs.setVerticalAlignment(VerticalAlignment.CENTER);
