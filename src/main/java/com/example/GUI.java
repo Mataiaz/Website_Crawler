@@ -41,7 +41,7 @@ public final class GUI extends JFrame {
         //option[2] = "Text format (txt)";
 
         Object selectedOption = JOptionPane.showInputDialog(null, "Choose a format to save in", "Format selection",
-                JOptionPane.QUESTION_MESSAGE, null, option, 1);
+                JOptionPane.QUESTION_MESSAGE, null, option, "Excel format (xlsx)");
         System.out.println(selectedOption);
         if (selectedOption.toString() == option[1])
         {
