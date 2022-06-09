@@ -88,7 +88,7 @@ public class Http_Response {
             if ((httpCode >= 200 && httpCode <= 226) && scamOrSelling.isEmpty())
             {
                 status = " UP ";
-                scamOrSelling = "NO RESULT";
+                scamOrSelling = " NO RESULT";
                 System.out.println("\nUP - " + domain + " " + httpCode + " (" + httpCodeFound + ")");
             }
             else if ((httpCode >= 400 && httpCode <= 511) || !scamOrSelling.isEmpty() || httpCode == 522)

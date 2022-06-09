@@ -19,7 +19,7 @@ public final class GUI extends JFrame {
 
     public static void promtUser() throws InterruptedException, IOException {
         response = JOptionPane.showConfirmDialog(null,
-                "Do you want to run with a excel file?\n\n"
+                "Are you planning on checking multiple websites?\n\n"
                         + "If you select NO the program will ask for 1 website",
                 "Launcher", JOptionPane.YES_NO_OPTION);
 
@@ -36,14 +36,22 @@ public final class GUI extends JFrame {
         App.fileLocation = JOptionPane.showInputDialog(null, "What is the file called?", "exampleExcel");
         App.fileLocation += ".xlsx";
         String[] option = new String[3];
-        option[0] = "Excel format (xlsx)";
-        option[1] = "Text format (txt)";
-        option[2] = "No format";
+        option[0] = "No format";
+        option[1] = "Excel format (xlsx)";
+        //option[2] = "Text format (txt)";
 
         Object selectedOption = JOptionPane.showInputDialog(null, "Choose a format to save in", "Format selection",
-                JOptionPane.QUESTION_MESSAGE, null, option, "No format");
+                JOptionPane.QUESTION_MESSAGE, null, option, 1);
         System.out.println(selectedOption);
-
+        if (selectedOption.toString() == option[1])
+        {
+            App.saveLocation = JOptionPane.showInputDialog(null, "What do you want to call the file?");
+            if (!App.saveLocation.contains(".xlsx"))
+            {
+                App.saveLocation = App.saveLocation + ".xlsx";
+            }
+            Create_File.main(App.saveLocation);
+        }
         response = JOptionPane.showConfirmDialog(null,
                 "Are you sure you want to run the program?\n\n" + "You have selected  " + selectedOption,
                 "Launcher", JOptionPane.YES_NO_OPTION);

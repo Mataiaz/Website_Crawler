@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class Error_Handler {
     public static void main(Exception e, String id, String domain) throws IOException {
+        String eString = String.valueOf(e);
         if (id.equals("Input"))
         {
-            String eString = String.valueOf(e);
             if (eString.contains("is null"))
             {
                 System.out.println("FINISHED\n");
@@ -14,7 +14,6 @@ public class Error_Handler {
         }
         if (id.equals("Connect"))
         {
-            String eString = String.valueOf(e);
             int httpCode = 0;
             if (eString.contains("timed out"))
             {
@@ -46,6 +45,10 @@ public class Error_Handler {
         }
         if (id.equals("Output"))
         {
+            if (eString.contains("Can't open the specified"))
+            {
+                Create_File.main(null);
+            }
             //System.out.print("ERROR: there was an error in class " + id + "\n" + e + "\n");
         }
     }
