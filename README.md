@@ -3,10 +3,10 @@ This is a webcrawler with the goal of getting back html status and general info 
 This is progam that can take a domain name, for example "github.com" and give feedback if it is online, a scam website, if it redirects and more.
 This program can take in a as many websites as you put in the excel file or you manually give a domain name in the file "App.java".
 
+FYI: A web crawler is a program that searches through the web or on a specific webpage and fetches the html code (the code that structures the webpage).
+
 # If you want to test the program just click this link #
 https://github.com/Mataiaz/Website-crawler-demo
-
-FYI: A web crawler is a program that searches through the web or on a specific webpage and fetches the html code (the code that structures the webpage).
 
 # A little back story #
 One of my friend was trying to finish a project for a company and struggling to solve some issues in his code.
