@@ -9,7 +9,7 @@ FYI: A web crawler is a program that searches through the web or on a specific w
 https://github.com/Mataiaz/Website-crawler-demo
 
 # A little back story #
-One of my friend was trying to finish a project for a company and struggling to solve some issues in his code.
+One of my friends was trying to finish a project for a company and struggling to solve some issues in his code.
 As i was interested to learn more about jsoup and java i decided to do the same task and also help him with the code
 as he also was still learning, this is the result of that.
 
