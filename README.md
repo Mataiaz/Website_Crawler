@@ -1,5 +1,5 @@
 # About this project #
-This is a webcrawler with the goal of getting back html status and general info from websites.
+This is a webcrawler with the goal of getting back http status and general info from websites.
 This is progam that can take a domain name, for example "github.com" and give feedback if it is online, a scam website, if it redirects and more.
 This program can take in a as many websites as you put in the excel file or you manually give a domain name in the file "App.java".
 
